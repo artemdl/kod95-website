@@ -24,7 +24,7 @@ export default function GallerySection() {
           <h2 className="font-display fade-up" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
             НАШИ <span style={{ color: "#e85d04" }}>КУРСАНТЫ</span>
           </h2>
-          <p className="fade-up" style={{ color: "#888", marginTop: 12, fontSize: "0.9rem" }}>
+          <p className="fade-up" style={{ color: "#f5f5f0", marginTop: 12, fontSize: "0.9rem" }}>
             Сотни водителей уже работают в Европе благодаря нашим курсам
           </p>
         </div>

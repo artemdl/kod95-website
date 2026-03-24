@@ -159,4 +159,12 @@ select.contact-input option { background: #1a1a1a; }
 @media (max-width: 768px) {
   section { padding: 70px 0; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .container { padding: 0 16px; }
+  .btn-primary { padding: 14px 28px; font-size: 0.8rem; }
+  .btn-outline { padding: 12px 24px; font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  section { padding: 56px 0; }
 }

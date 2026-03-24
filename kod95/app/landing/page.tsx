@@ -144,113 +144,25 @@ const additionalServices = [
 export default function LandingPage() {
   return (
     <>
-      {/* ── Minimal sticky header ── */}
-      <header
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 1000,
-          background: "rgba(10,10,10,0.92)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-        }}
-      >
-        <div
-          className="container"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "10px 24px",
-          }}
-        >
-          {/* Logo + tagline separated by divider */}
+      {/* ── Simple header — no menu ── */}
+      <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000, background: "rgba(10,10,10,0.92)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 24px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <Image
-                src="/logo.png"
-                alt="KOD 95 ŁÓDŹ"
-                width={44}
-                height={44}
-                style={{ borderRadius: "50%" }}
-              />
-              <div
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  fontSize: "1.2rem",
-                  color: "#f5f5f0",
-                  lineHeight: 1,
-                }}
-              >
-                KOD 95 ŁÓDŹ
-              </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+              <Image src="/logo.png" alt="KOD 95 ŁÓDŹ" width={40} height={40} style={{ borderRadius: "50%" }} />
+              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.1rem", color: "#f5f5f0", lineHeight: 1 }}>KOD 95 ŁÓDŹ</div>
             </div>
-
-            {/* Divider line */}
-            <div
-              style={{
-                width: 1,
-                height: 36,
-                background: "rgba(255,255,255,0.15)",
-              }}
-            />
-
-            {/* Two-line tagline */}
-            <div style={{ lineHeight: 1.3 }}>
-              <div
-                style={{
-                  fontSize: "0.72rem",
-                  color: "#f5f5f0",
-                  fontWeight: 600,
-                  letterSpacing: "0.02em",
-                }}
-              >
-                Помогаем получить Код 95
-              </div>
-              <div
-                style={{
-                  fontSize: "0.72rem",
-                  color: "#f5f5f0",
-                  fontWeight: 600,
-                  letterSpacing: "0.02em",
-                }}
-              >
-                и работать водителем в Европе
+            <div className="landing-tagline" style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <div style={{ width: 1, height: 36, background: "rgba(255,255,255,0.15)" }} />
+              <div style={{ lineHeight: 1.3 }}>
+                <div style={{ fontSize: "0.72rem", color: "#f5f5f0", fontWeight: 600, letterSpacing: "0.02em" }}>Помогаем получить Код 95</div>
+                <div style={{ fontSize: "0.72rem", color: "#f5f5f0", fontWeight: 600, letterSpacing: "0.02em" }}>и работать водителем в Европе</div>
               </div>
             </div>
           </div>
-
-          {/* Phone icon only — no text */}
-          <a
-            href="tel:+48884398836"
-            style={{
-              width: 48,
-              height: 48,
-              borderRadius: 12,
-              background: "rgba(232,93,4,0.12)",
-              border: "1px solid rgba(232,93,4,0.25)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "all 0.2s",
-              flexShrink: 0,
-            }}
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#e85d04"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
+          <a href="tel:+48575633444" className="landing-phone-btn" style={{ height: 44, borderRadius: 10, background: "rgba(232,93,4,0.12)", border: "1px solid rgba(232,93,4,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, textDecoration: "none", gap: 8, padding: "0 16px" }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            <span className="landing-phone-text" style={{ color: "#e85d04", fontSize: "0.78rem", fontWeight: 700 }}>+48 575 633 444</span>
           </a>
         </div>
       </header>
@@ -351,7 +263,7 @@ export default function LandingPage() {
               </span>
             </div>
 
-            {/* H1: smaller "узнай как получить", КОД 95 x2 bigger */}
+            {/* H1 */}
             <h1
               className="font-display fade-up"
               style={{
@@ -362,19 +274,22 @@ export default function LandingPage() {
               <span
                 style={{
                   display: "block",
-                  fontSize: "clamp(1.8rem, 4.5vw, 3.5rem)",
+                  fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
                   color: "#f5f5f0",
+                  letterSpacing: "0.15em",
                 }}
               >
                 УЗНАЙ КАК ПОЛУЧИТЬ
               </span>
               <span
+                className="hero-kod95"
                 style={{
                   display: "block",
                   fontSize: "clamp(4.5rem, 14vw, 11rem)",
-                  color: "#e85d04",
-                  textShadow: "0 0 80px rgba(232,93,4,0.4)",
+                  color: "#ffffff",
+                  fontWeight: 900,
                   lineHeight: 0.95,
+                  textShadow: "0 0 60px rgba(232,93,4,0.5), 0 4px 12px rgba(0,0,0,0.8)",
                 }}
               >
                 КОД 95
@@ -917,8 +832,8 @@ export default function LandingPage() {
                     </svg>
                   ),
                   label: "Телефон",
-                  value: "+48 884 398 836",
-                  href: "tel:+48884398836",
+                  value: "+48 575 633 444",
+                  href: "tel:+48575633444",
                 },
                 {
                   icon: (
@@ -1158,9 +1073,21 @@ export default function LandingPage() {
           50% { box-shadow: 0 0 0 14px rgba(232,93,4,0), 0 4px 30px rgba(232,93,4,0.5); transform: scale(1.03); }
           100% { box-shadow: 0 0 0 0 rgba(232,93,4,0), 0 4px 20px rgba(232,93,4,0.3); transform: scale(1); }
         }
+        .hero-kod95 {
+          -webkit-text-stroke: 2px #e85d04;
+          paint-order: stroke fill;
+        }
         @media (max-width: 768px) {
           .trust-grid { grid-template-columns: 1fr !important; }
           .two-col-landing { grid-template-columns: 1fr !important; }
+          .hero-kod95 { -webkit-text-stroke: 1.5px #e85d04; }
+          .landing-tagline { display: none !important; }
+          .landing-phone-text { display: none; }
+          .landing-phone-btn { width: 44px !important; padding: 0 !important; }
+          .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 480px) {
+          .gallery-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>

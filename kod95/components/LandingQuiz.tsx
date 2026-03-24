@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const questions = [
   {
@@ -62,10 +63,10 @@ const panelStyle: React.CSSProperties = {
 };
 
 export default function LandingQuiz() {
+  const router = useRouter();
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [phone, setPhone] = useState("");
-  const [sent, setSent] = useState(false);
 
   const totalSteps = questions.length + 1;
   const progressPercent = Math.min(((step + 1) / totalSteps) * 100, 100);
@@ -77,32 +78,8 @@ export default function LandingQuiz() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setStep(6);
+    router.push("/spasibo");
   };
-
-  /* ── Success ── */
-  if (sent) {
-    return (
-      <div style={{ ...panelStyle, textAlign: "center", padding: "56px 36px" }}>
-        <div style={{
-          width: 80, height: 80, borderRadius: "50%",
-          background: "rgba(34,197,94,0.15)", border: "2px solid rgba(34,197,94,0.4)",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          margin: "0 auto 28px",
-        }}>
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-        </div>
-        <h3 className="font-display" style={{ fontSize: "2.4rem", marginBottom: 16, color: "#f5f5f0" }}>СПАСИБО!</h3>
-        <p style={{ color: "#f5f5f0", fontSize: "1.1rem", fontWeight: 600, marginBottom: 8 }}>Ваши данные приняты</p>
-        <p style={{ color: "#bbb", fontSize: "0.95rem", lineHeight: 1.8, maxWidth: 420, margin: "0 auto" }}>
-          Наш эксперт свяжется с Вами в ближайшее время и предоставит полную информацию о Коде 95
-        </p>
-      </div>
-    );
-  }
 
   /* ── Phone step ── */
   if (step >= questions.length) {

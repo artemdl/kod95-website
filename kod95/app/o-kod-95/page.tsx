@@ -366,9 +366,9 @@ export default function OKod95() {
             </h2>
             <p style={{ color: "#888", marginBottom: 32, fontSize: "0.95rem" }}>Бесплатная консультация — позвоните или напишите</p>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="tel:+48884398836" className="btn-primary">
+              <a href="tel:+48575633444" className="btn-primary">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-                +48 884 398 836
+                +48 575 633 444
               </a>
               <Link href="/#contact" className="btn-outline">Написать нам</Link>
               <Link href="/uslugi" className="btn-outline">Все услуги</Link>
