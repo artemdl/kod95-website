@@ -5,8 +5,15 @@ import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Всё про Код 95 | KOD 95 ŁÓDŹ",
-  description: "Полная информация о сертификате Код 95 — что это такое, виды курсов, документы, процесс получения в Польше.",
+  title: "Всё про Код 95 — Что это, курсы, документы",
+  description: "Полная информация о сертификате Код 95 в Польше: что это такое, короткий и длинный курс, необходимые документы, требования к водителю, процесс получения. Обучение на русском и украинском.",
+  keywords: ["что такое код 95", "код 95 документы", "код 95 курс 35 часов", "код 95 140 часов", "квалификация водителя", "kwalifikacja wstępna przyspieszona", "PKZ profil kierowcy"],
+  alternates: { canonical: "https://kod95lodz.com/o-kod-95" },
+  openGraph: {
+    title: "Всё про Код 95 — KOD 95 ŁÓDŹ",
+    description: "Что такое Код 95, виды курсов, документы и процесс получения в Польше.",
+    url: "https://kod95lodz.com/o-kod-95",
+  },
 };
 
 const categories = [

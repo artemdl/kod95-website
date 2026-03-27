@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import NavClient from "@/components/NavClient";
 import GallerySection from "@/components/GallerySection";
@@ -5,6 +6,18 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import TeamCarousel from "@/components/TeamCarousel";
+
+export const metadata: Metadata = {
+  title: "Получить Код 95 в Лодзи — Обучение водителей | KOD 95 ŁÓDŹ",
+  description: "Получите Код 95 в Лодзи и работайте водителем в Европе. Обучение на украинском и русском языках. 1700+ выпускников с 2017 года. Короткий курс от 35 часов.",
+  keywords: ["код 95 лодзь", "получить код 95", "код 95 польша цена", "обучение водителей лодзь", "kod 95 łódź", "работа водителем европа"],
+  alternates: { canonical: "https://kod95lodz.com" },
+  openGraph: {
+    title: "Получить Код 95 в Лодзи — KOD 95 ŁÓDŹ",
+    description: "Получите Код 95 и работайте водителем в Европе. 1700+ выпускников. Обучение на украинском и русском.",
+    url: "https://kod95lodz.com",
+  },
+};
 
 /* ─── CTA reusable ─── */
 function CTAButton() {
@@ -30,41 +43,46 @@ export default function Home() {
           <div style={{ position: "absolute", top: "20%", left: "5%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,93,4,0.18) 0%, transparent 70%)", pointerEvents: "none", zIndex: 1 }} />
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(232,93,4,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(232,93,4,0.03) 1px, transparent 1px)", backgroundSize: "60px 60px", pointerEvents: "none", zIndex: 1 }} />
           <div style={{ position: "absolute", right: "-5%", top: 0, bottom: 0, width: "70%", backgroundImage: "url('/truck.webp')", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "right center", opacity: 0.18, filter: "brightness(1.2)", pointerEvents: "none" }} />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #0a0a0a 35%, rgba(10,10,10,0.6) 60%, transparent 100%)", pointerEvents: "none", zIndex: 1 }} />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, #0a0a0a 25%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.4) 100%)", pointerEvents: "none", zIndex: 1 }} />
 
-          <div className="container" style={{ position: "relative", zIndex: 2 }}>
-            <div style={{ maxWidth: 700 }}>
-              <div className="glass fade-up" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "8px 18px", borderRadius: 4, marginBottom: 28 }}>
-                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 8px #22c55e", animation: "pulse 2s infinite" }} />
-                <span style={{ fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#f5f5f0", opacity: 0.85 }}>Работаем с 2017 года</span>
-              </div>
-
-              <h1 className="font-display fade-up" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1.1, marginBottom: 24 }}>
-                ПОЛУЧИ <span style={{ color: "#ffffff" }}>КОД 95</span>
-                <br />
-                <span style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>в г.Лодзь</span>
-              </h1>
-              <p className="fade-up" style={{ fontSize: "1.3rem", color: "#f5f5f0", lineHeight: 1.7, marginBottom: 32, maxWidth: 550, fontWeight: 600 }}>
-                с гарантией допуска к работе в ЕС
-              </p>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 40 }}>
-                {[
-                  "Обучение на украинском / русском",
-                  "Под ключ без лишней бюрократии",
-                  "Работаем по всей Европе",
-                ].map((item, i) => (
-                  <div key={i} className="fade-up" style={{ display: "flex", alignItems: "center", gap: 12, animationDelay: `${0.2 + i * 0.1}s` }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#e85d04" strokeWidth="1.5"/><polyline points="8 12 11 15 16 9" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    <span style={{ fontSize: "1.05rem", color: "#f5f5f0", fontWeight: 500 }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div>
-                <CTAButton />
-              </div>
+          <div className="container" style={{ position: "relative", zIndex: 2, textAlign: "center" }}>
+            {/* Badge */}
+            <div className="glass" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "8px 18px", borderRadius: 4, marginBottom: 28 }}>
+              <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 8px #22c55e", animation: "pulse 2s infinite" }} />
+              <span style={{ fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#f5f5f0", opacity: 0.85 }}>Работаем с 2017 года</span>
             </div>
+
+            {/* H1 — one line */}
+            <h1 className="font-display" style={{ lineHeight: 1, marginBottom: 24 }}>
+              <span style={{ display: "block", fontSize: "clamp(2rem, 5.5vw, 4.2rem)", color: "#ffffff", fontWeight: 900, letterSpacing: "0.08em" }}>
+                ПОЛУЧИ КОД 95
+              </span>
+              <span style={{ display: "block", fontSize: "clamp(1.6rem, 3.5vw, 2.8rem)", color: "#f5f5f0", letterSpacing: "0.1em", marginTop: 8 }}>
+                в г.Лодзь
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p style={{ fontSize: "1.2rem", color: "#f5f5f0", lineHeight: 1.7, marginBottom: 32, fontWeight: 500 }}>
+              с гарантией допуска к работе в ЕС
+            </p>
+
+            {/* Bullet icons in a row */}
+            <div style={{ display: "flex", justifyContent: "center", gap: 40, marginBottom: 36, flexWrap: "wrap" }}>
+              {[
+                { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>, label: "Обучение на укр / рус" },
+                { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>, label: "Под ключ" },
+                { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>, label: "По всей Европе" },
+              ].map((b, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  {b.icon}
+                  <span style={{ fontSize: "0.9rem", color: "#f5f5f0", fontWeight: 600 }}>{b.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <CTAButton />
           </div>
 
           <style>{`
@@ -73,9 +91,6 @@ export default function Home() {
               0% { box-shadow: 0 0 0 0 rgba(232,93,4,0.6), 0 4px 20px rgba(232,93,4,0.3); transform: scale(1); }
               50% { box-shadow: 0 0 0 14px rgba(232,93,4,0), 0 4px 30px rgba(232,93,4,0.5); transform: scale(1.03); }
               100% { box-shadow: 0 0 0 0 rgba(232,93,4,0), 0 4px 20px rgba(232,93,4,0.3); transform: scale(1); }
-            }
-            @media (max-width: 900px) {
-              #home .container > div { max-width: 100% !important; }
             }
           `}</style>
         </section>
@@ -195,7 +210,7 @@ export default function Home() {
               {[
                 { value: "1700+", label: "водителей уже успешно прошли обучение и работают в крупнейших автопарках Европы" },
                 { value: "95%", label: "курсантов сдают теоретический тест с первого раза благодаря нашей методике" },
-                { value: "0", label: "вопросов от контролирующих органов: выдаём только легальные документы, которые проходят любую проверку" },
+                { value: "7+", label: "лет на рынке — обучаем водителей и помогаем с трудоустройством в Европе с 2017 года" },
               ].map((s, i) => (
                 <div key={i} className="glass-card glass fade-up" style={{ padding: "36px 28px", borderRadius: 8, animationDelay: `${i * 0.12}s` }}>
                   <div className="font-display" style={{ fontSize: "3.5rem", color: "#e85d04", lineHeight: 1, marginBottom: 12 }}>{s.value}</div>

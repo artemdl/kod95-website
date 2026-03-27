@@ -5,8 +5,15 @@ import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Наша команда | KOD 95 ŁÓDŹ",
-  description: "Познакомьтесь с командой KOD 95 ŁÓDŹ — профессионалы с многолетним опытом в подготовке водителей-международников.",
+  title: "Наша команда — Преподаватели и менеджеры",
+  description: "Познакомьтесь с командой KOD 95 ŁÓDŹ — сертифицированные инструкторы и менеджеры с многолетним опытом подготовки водителей-международников. Обучение на русском и украинском.",
+  keywords: ["команда kod 95", "инструкторы код 95", "преподаватели код 95 лодзь", "обучение водителей на русском"],
+  alternates: { canonical: "https://kod95lodz.com/nasha-komanda" },
+  openGraph: {
+    title: "Наша команда — KOD 95 ŁÓDŹ",
+    description: "Профессиональная команда инструкторов и менеджеров для подготовки водителей.",
+    url: "https://kod95lodz.com/nasha-komanda",
+  },
 };
 
 const managers = [

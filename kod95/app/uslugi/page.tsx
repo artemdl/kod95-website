@@ -4,8 +4,15 @@ import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Услуги | KOD 95 ŁÓDŹ",
-  description: "Все услуги KOD 95 ŁÓDŹ: Код 95 для категорий C и D, замена прав, чип-карта для тахографа, трудоустройство.",
+  title: "Услуги — Код 95, замена прав, чип-карта, трудоустройство",
+  description: "Все услуги KOD 95 ŁÓDŹ: получение Код 95 категорий C и D, замена водительских прав на европейские, чип-карта для тахографа, помощь в трудоустройстве водителем в Европе.",
+  keywords: ["код 95 категория C", "код 95 категория D", "замена прав на польские", "чип карта тахограф", "трудоустройство водителем европа", "karta kierowcy", "wymiana prawa jazdy"],
+  alternates: { canonical: "https://kod95lodz.com/uslugi" },
+  openGraph: {
+    title: "Услуги — KOD 95 ŁÓDŹ",
+    description: "Код 95 для категорий C и D, замена прав, чип-карта, трудоустройство водителем в Европе.",
+    url: "https://kod95lodz.com/uslugi",
+  },
 };
 
 const services = [
