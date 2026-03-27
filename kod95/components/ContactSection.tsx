@@ -20,7 +20,7 @@ export default function ContactSection() {
           <div>
             <div className="orange-line fade-up" />
             <h2 className="font-display fade-up" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1, marginBottom: 24 }}>
-              ЗАПИСАТЬСЯ<br /><span style={{ color: "#e85d04" }}>НА КУРС</span>
+              ПОЛУЧИТЕ БЕСПЛАТНУЮ<br /><span style={{ color: "#e85d04" }}>КОНСУЛЬТАЦИЮ</span>
             </h2>
             <p className="fade-up" style={{ color: "#888", lineHeight: 1.8, marginBottom: 40, fontSize: "0.95rem" }}>
               Оставьте заявку и мы свяжемся с вами в течение часа. Бесплатно расскажем о программе и стоимости обучения.

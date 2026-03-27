@@ -61,7 +61,7 @@ export default function OKod95() {
             <h1 className="font-display" style={{ fontSize: "clamp(3rem, 7vw, 5rem)", color: "#f5f5f0", lineHeight: 1, marginBottom: 16 }}>
               ВСЁ ПРО <span style={{ color: "#e85d04" }}>КОД 95</span>
             </h1>
-            <p style={{ color: "#888", fontSize: "1rem", maxWidth: 600 }}>
+            <p style={{ color: "#ccc", fontSize: "1rem", maxWidth: 600 }}>
               Полное руководство — от определения сертификата до списка документов и процесса получения в Польше
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function OKod95() {
               ["#protsess", "Процесс"],
               ["#dokumenty", "Документы"],
             ].map(([href, label]) => (
-              <a key={href} href={href} style={{ color: "#888", fontSize: "0.8rem", textDecoration: "none", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 600, transition: "color 0.2s", whiteSpace: "nowrap" }}
+              <a key={href} href={href} style={{ color: "#ccc", fontSize: "0.8rem", textDecoration: "none", textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 600, transition: "color 0.2s", whiteSpace: "nowrap" }}
                 className="quick-nav-link">{label}</a>
             ))}
           </div>
@@ -94,13 +94,13 @@ export default function OKod95() {
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "start" }} className="two-col">
               <div className="fade-up">
-                <p style={{ color: "#aaa", lineHeight: 1.85, fontSize: "0.95rem", marginBottom: 20 }}>
+                <p style={{ color: "#ddd", lineHeight: 1.85, fontSize: "0.95rem", marginBottom: 20 }}>
                   Для работы по перевозке грузов или пассажиров в транспортной фирме в странах Европейского Союза недостаточно иметь в водительском удостоверении соответствующие открытые категории. Каждый водитель обязан иметь <strong style={{ color: "#f5f5f0" }}>специальный сертификат</strong>, подтверждающий прохождение дополнительного квалификационного курса.
                 </p>
-                <p style={{ color: "#aaa", lineHeight: 1.85, fontSize: "0.95rem", marginBottom: 20 }}>
+                <p style={{ color: "#ddd", lineHeight: 1.85, fontSize: "0.95rem", marginBottom: 20 }}>
                   Курс для грузоперевозок называется <strong style={{ color: "#f5f5f0" }}>kurs na przewóz rzeczy</strong> (блок C), для водителей автобусов — <strong style={{ color: "#f5f5f0" }}>kurs na przewóz osób</strong> (блок D).
                 </p>
-                <p style={{ color: "#aaa", lineHeight: 1.85, fontSize: "0.95rem" }}>
+                <p style={{ color: "#ddd", lineHeight: 1.85, fontSize: "0.95rem" }}>
                   Обучение можно пройти только в аккредитованных учебных заведениях на территории ЕС. <strong style={{ color: "#f5f5f0" }}>Ни Украина, ни Беларусь, ни другие страны СНГ</strong> выдавать европейский Код 95 не могут — их сертификаты для работы в ЕС не подходят.
                 </p>
               </div>
@@ -135,7 +135,7 @@ export default function OKod95() {
               {categories.map((cat, i) => (
                 <div key={i} className="glass-card fade-up" style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.07)", padding: "18px 20px", display: "flex", gap: 14, alignItems: "center", animationDelay: `${i * 0.06}s` }}>
                   <div className="font-display" style={{ fontSize: "2rem", color: "#e85d04", flexShrink: 0, minWidth: 50 }}>{cat.code}</div>
-                  <span style={{ fontSize: "0.85rem", color: "#aaa", lineHeight: 1.4 }}>{cat.desc}</span>
+                  <span style={{ fontSize: "0.85rem", color: "#ddd", lineHeight: 1.4 }}>{cat.desc}</span>
                 </div>
               ))}
             </div>
@@ -149,28 +149,28 @@ export default function OKod95() {
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }} className="two-col">
               <div className="fade-up">
-                <h3 style={{ fontSize: "0.75rem", color: "#666", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Теоретические вопросы</h3>
+                <h3 style={{ fontSize: "0.75rem", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Теоретические вопросы</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {topics.map((t, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                       <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#e85d04", flexShrink: 0, marginTop: 7 }} />
-                      <span style={{ fontSize: "0.88rem", color: "#bbb" }}>{t}</span>
+                      <span style={{ fontSize: "0.88rem", color: "#eee" }}>{t}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="fade-up">
-                <h3 style={{ fontSize: "0.75rem", color: "#666", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Практические занятия</h3>
+                <h3 style={{ fontSize: "0.75rem", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Практические занятия</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 32 }}>
                   {practical.map((p, i) => (
                     <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                       <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#f48c06", flexShrink: 0, marginTop: 7 }} />
-                      <span style={{ fontSize: "0.88rem", color: "#bbb" }}>{p}</span>
+                      <span style={{ fontSize: "0.88rem", color: "#eee" }}>{p}</span>
                     </div>
                   ))}
                 </div>
                 <div className="glass" style={{ padding: "20px 24px", borderRadius: 8 }}>
-                  <p style={{ color: "#aaa", fontSize: "0.88rem", lineHeight: 1.7 }}>
+                  <p style={{ color: "#ddd", fontSize: "0.88rem", lineHeight: 1.7 }}>
                     Обучение не преследует цели научить правилам дорожного движения — это уже пройдено при получении категорий. Курс готовит водителя к <strong style={{ color: "#f5f5f0" }}>профессиональной деятельности в Европе</strong>.
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export default function OKod95() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 24 }} className="two-col">
 
               {/* Короткий */}
-              <div className="fade-up glass-card" style={{ background: "rgba(232,93,4,0.05)", border: "1px solid rgba(232,93,4,0.2)", padding: "32px 28px", borderRadius: 4 }}>
+              <div className="fade-up glass-card course-card-gold" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", padding: "32px 28px", borderRadius: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                   <div>
                     <div style={{ fontSize: "0.7rem", color: "#e85d04", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 6 }}>Kwalifikacja Okresowa (SO)</div>
@@ -195,47 +195,50 @@ export default function OKod95() {
                   </div>
                   <div style={{ textAlign: "right" }}>
                     <div className="font-display" style={{ fontSize: "2.5rem", color: "#e85d04" }}>35</div>
-                    <div style={{ fontSize: "0.7rem", color: "#888", textTransform: "uppercase" }}>часов</div>
+                    <div style={{ fontSize: "0.7rem", color: "#ccc", textTransform: "uppercase" }}>часов</div>
                   </div>
                 </div>
-                <p style={{ color: "#aaa", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: 16 }}>Кто может пройти:</p>
+                <p style={{ color: "#eee", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: 16 }}>Кто может пройти:</p>
                 {["Категория C открыта до 09.09.2009", "Категория D открыта до 09.08.2008", "Ранее уже проходили длинный курс в ЕС"].map((item, i) => (
                   <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 8 }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0, marginTop: 2 }}>
                       <circle cx="12" cy="12" r="11" stroke="#e85d04" strokeWidth="1.5"/>
                       <polyline points="8 12 11 15 16 9" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                    <span style={{ fontSize: "0.85rem", color: "#bbb" }}>{item}</span>
+                    <span style={{ fontSize: "0.85rem", color: "#f5f5f0" }}>{item}</span>
                   </div>
                 ))}
                 <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(232,93,4,0.08)", borderRadius: 6 }}>
-                  <p style={{ color: "#aaa", fontSize: "0.82rem" }}>
+                  <p style={{ color: "#eee", fontSize: "0.82rem" }}>
                     Экзамен <strong style={{ color: "#f5f5f0" }}>не предусмотрен</strong>. Если есть актуальный АДР — курс занимает всего <strong style={{ color: "#e85d04" }}>3 дня</strong>.
                   </p>
                 </div>
               </div>
 
               {/* Длинный */}
-              <div className="fade-up glass-card" style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", padding: "32px 28px", borderRadius: 4, animationDelay: "0.1s" }}>
+              <div className="fade-up glass-card course-card-silver" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", padding: "32px 28px", borderRadius: 8, animationDelay: "0.1s" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                   <div>
-                    <div style={{ fontSize: "0.7rem", color: "#888", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 6 }}>Kwalifikacja Wstępna Przyspieszona (KWP)</div>
+                    <div style={{ fontSize: "0.7rem", color: "#e85d04", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 6 }}>Kwalifikacja Wstępna Przyspieszona (KWP)</div>
                     <h3 className="font-display" style={{ fontSize: "2rem", color: "#f5f5f0" }}>ДЛИННЫЙ КУРС</h3>
                   </div>
                   <div style={{ textAlign: "right" }}>
-                    <div className="font-display" style={{ fontSize: "2.5rem", color: "#888" }}>140</div>
-                    <div style={{ fontSize: "0.7rem", color: "#666", textTransform: "uppercase" }}>часов</div>
+                    <div className="font-display" style={{ fontSize: "2.5rem", color: "#e85d04" }}>140</div>
+                    <div style={{ fontSize: "0.7rem", color: "#ccc", textTransform: "uppercase" }}>часов</div>
                   </div>
                 </div>
-                <p style={{ color: "#aaa", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: 16 }}>Необходим если:</p>
+                <p style={{ color: "#eee", fontSize: "0.88rem", lineHeight: 1.7, marginBottom: 16 }}>Необходим если:</p>
                 {["Категория C открыта после 09.09.2009", "Категория D открыта после 09.08.2008", "Никогда ранее не проходили квалификацию"].map((item, i) => (
                   <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 8 }}>
-                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#666", flexShrink: 0, marginTop: 7 }} />
-                    <span style={{ fontSize: "0.85rem", color: "#bbb" }}>{item}</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0, marginTop: 2 }}>
+                      <circle cx="12" cy="12" r="11" stroke="#e85d04" strokeWidth="1.5"/>
+                      <polyline points="8 12 11 15 16 9" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <span style={{ fontSize: "0.85rem", color: "#f5f5f0" }}>{item}</span>
                   </div>
                 ))}
-                <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(255,255,255,0.03)", borderRadius: 6 }}>
-                  <p style={{ color: "#aaa", fontSize: "0.82rem" }}>
+                <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(255,255,255,0.04)", borderRadius: 6 }}>
+                  <p style={{ color: "#eee", fontSize: "0.82rem" }}>
                     130 часов теории + 10 часов практики. По окончании — <strong style={{ color: "#f5f5f0" }}>теоретический экзамен</strong> (30 вопросов). Проходится <strong style={{ color: "#f5f5f0" }}>один раз</strong> в жизни.
                   </p>
                 </div>
@@ -245,7 +248,7 @@ export default function OKod95() {
             {/* Дополнительный курс */}
             <div className="fade-up glass" style={{ padding: "24px 28px", borderRadius: 8 }}>
               <div style={{ fontSize: "0.72rem", color: "#e85d04", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 8 }}>Дополнительный курс (Kwalifikacja Wstępna Uzupełniająca)</div>
-              <p style={{ color: "#aaa", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#ddd", fontSize: "0.9rem", lineHeight: 1.7 }}>
                 Если водитель уже имеет длинный курс на одну категорию (C или D) и хочет добавить вторую — он может пройти <strong style={{ color: "#f5f5f0" }}>короткий курс 35 часов</strong> с экзаменом (10 вопросов, минимум 5 правильных).
               </p>
             </div>
@@ -259,25 +262,25 @@ export default function OKod95() {
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }} className="two-col">
               <div className="fade-up">
-                <h3 style={{ fontSize: "0.75rem", color: "#666", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Требования к водителю</h3>
+                <h3 style={{ fontSize: "0.75rem", color: "#f5f5f0", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Требования к водителю</h3>
                 {whoCanStudy.map((item, i) => (
                   <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", marginBottom: 14 }}>
                     <div style={{ width: 28, height: 28, borderRadius: "50%", background: "rgba(232,93,4,0.1)", border: "1px solid rgba(232,93,4,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                       <span className="font-display" style={{ fontSize: "0.85rem", color: "#e85d04" }}>{i + 1}</span>
                     </div>
-                    <span style={{ fontSize: "0.88rem", color: "#bbb", lineHeight: 1.5, paddingTop: 4 }}>{item}</span>
+                    <span style={{ fontSize: "0.88rem", color: "#eee", lineHeight: 1.5, paddingTop: 4 }}>{item}</span>
                   </div>
                 ))}
               </div>
               <div className="fade-up">
-                <h3 style={{ fontSize: "0.75rem", color: "#666", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Допустимый правовой статус в Польше</h3>
+                <h3 style={{ fontSize: "0.75rem", color: "#f5f5f0", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20 }}>Допустимый правовой статус в Польше</h3>
                 {legalStatus.map((item, i) => (
                   <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0, marginTop: 3 }}>
                       <circle cx="12" cy="12" r="11" stroke="#e85d04" strokeWidth="1.5"/>
                       <polyline points="8 12 11 15 16 9" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                    <span style={{ fontSize: "0.88rem", color: "#bbb" }}>{item}</span>
+                    <span style={{ fontSize: "0.88rem", color: "#eee" }}>{item}</span>
                   </div>
                 ))}
                 <div className="glass-orange" style={{ padding: "16px 20px", borderRadius: 8, marginTop: 20 }}>
@@ -305,12 +308,12 @@ export default function OKod95() {
                 <div key={i} className="fade-up" style={{ background: "#0d0d0d", padding: "28px 24px", animationDelay: `${i * 0.1}s` }}>
                   <div className="font-display" style={{ fontSize: "4rem", color: "#e85d04", opacity: 0.9, lineHeight: 1, marginBottom: 12 }}>{s.n}</div>
                   <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#f5f5f0", marginBottom: 8 }}>{s.title}</h3>
-                  <p style={{ fontSize: "0.84rem", color: "#888", lineHeight: 1.7 }}>{s.desc}</p>
+                  <p style={{ fontSize: "0.84rem", color: "#ccc", lineHeight: 1.7 }}>{s.desc}</p>
                 </div>
               ))}
             </div>
             <div className="glass fade-up" style={{ padding: "20px 28px", borderRadius: 8 }}>
-              <p style={{ color: "#aaa", fontSize: "0.9rem", lineHeight: 1.7 }}>
+              <p style={{ color: "#f5f5f0", fontSize: "0.9rem", lineHeight: 1.7 }}>
                 <strong style={{ color: "#e85d04" }}>PKZ (profil kierowcy zawodowego)</strong> — цифровой профиль водителя, являющийся разрешением на обучение. Оформляется в ужонде по отделу коммуникации и транспорта. В крупных городах есть электронная очередь, в отделениях старост — живая.
               </p>
             </div>
@@ -336,7 +339,7 @@ export default function OKod95() {
                 },
                 {
                   title: "Без замены прав",
-                  color: "#888",
+                  color: "#ccc",
                   docs: ["Паспорт (оригинал)", "Права + копия", "Справка от врача (не старше года)", "Психотесты", "Фото 3,5×4,5", "Wniosek о выдаче Karty kwalifikacji kierowcy", "Если был старый код — предоставить его", "Госпошлина 150 зл"],
                 },
               ].map((col, i) => (
@@ -346,7 +349,7 @@ export default function OKod95() {
                   {col.docs.map((doc, j) => (
                     <div key={j} style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: 8 }}>
                       <div style={{ width: 5, height: 5, borderRadius: "50%", background: col.color, flexShrink: 0, marginTop: 7, opacity: 0.8 }} />
-                      <span style={{ fontSize: "0.82rem", color: "#aaa", lineHeight: 1.4 }}>{doc}</span>
+                      <span style={{ fontSize: "0.82rem", color: "#ddd", lineHeight: 1.4 }}>{doc}</span>
                     </div>
                   ))}
                 </div>
@@ -364,7 +367,7 @@ export default function OKod95() {
             <h2 className="font-display" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", marginBottom: 16 }}>
               ОСТАЛИСЬ ВОПРОСЫ? <span style={{ color: "#e85d04" }}>МЫ ПОМОЖЕМ</span>
             </h2>
-            <p style={{ color: "#888", marginBottom: 32, fontSize: "0.95rem" }}>Бесплатная консультация — позвоните или напишите</p>
+            <p style={{ color: "#f5f5f0", marginBottom: 32, fontSize: "1.15rem", fontWeight: 500 }}>Бесплатная консультация — позвоните или напишите</p>
             <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="tel:+48575633444" className="btn-primary">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
@@ -384,6 +387,28 @@ export default function OKod95() {
         .two-col { }
         .docs-grid { }
         .quick-nav-link:hover { color: #e85d04 !important; }
+        @keyframes shimmerGold {
+          0% { transform: translateX(-200%) skewX(-20deg); }
+          100% { transform: translateX(400%) skewX(-20deg); }
+        }
+        @keyframes shimmerSilver {
+          0% { transform: translateX(-200%) skewX(-20deg); }
+          100% { transform: translateX(400%) skewX(-20deg); }
+        }
+        .course-card-gold { position: relative; overflow: hidden; }
+        .course-card-gold::before {
+          content: ''; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255,200,80,0.06), transparent);
+          animation: shimmerGold 4s ease-in-out infinite;
+          pointer-events: none;
+        }
+        .course-card-silver { position: relative; overflow: hidden; }
+        .course-card-silver::before {
+          content: ''; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(200,210,230,0.06), transparent);
+          animation: shimmerSilver 5s ease-in-out infinite;
+          pointer-events: none;
+        }
         @media (max-width: 900px) {
           .two-col { grid-template-columns: 1fr !important; gap: 32px !important; }
           .docs-grid { grid-template-columns: 1fr !important; }

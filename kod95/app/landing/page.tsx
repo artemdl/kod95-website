@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 const trustStats = [
   { value: "1700+", label: "Водителей обучено" },
   { value: "95%", label: "Сдают с 1-го раза" },
-  { value: "0", label: "Претензий от органов" },
 ];
 
 const safetyPoints = [
@@ -282,14 +281,12 @@ export default function LandingPage() {
                 УЗНАЙ КАК ПОЛУЧИТЬ
               </span>
               <span
-                className="hero-kod95"
                 style={{
                   display: "block",
                   fontSize: "clamp(4.5rem, 14vw, 11rem)",
                   color: "#ffffff",
                   fontWeight: 900,
                   lineHeight: 0.95,
-                  textShadow: "0 0 60px rgba(232,93,4,0.5), 0 4px 12px rgba(0,0,0,0.8)",
                 }}
               >
                 КОД 95
@@ -400,7 +397,7 @@ export default function LandingPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
+                gridTemplateColumns: "repeat(2, 1fr)",
                 gap: 24,
               }}
               className="trust-grid"
@@ -644,6 +641,11 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* ── Quiz CTA after gallery ── */}
+        <div style={{ background: "#0a0a0a", padding: "40px 0", textAlign: "center" }}>
+          <LandingQuizModal />
+        </div>
 
         {/* ━━━ SECTION 5 — What we do (brighter text) ━━━ */}
         <section style={{ background: "#0d0d0d", padding: "80px 0" }}>

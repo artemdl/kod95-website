@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import NavClient from "@/components/NavClient";
 import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 const services = [
   {
     id: "kod95-c",
-    icon: "/icon-adr.webp",
+    icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>,
     title: "Код 95 — Категория C",
     subtitle: "Грузовые автомобили",
     desc: "Обязательный сертификат для водителей грузовых автомобилей свыше 3,5 тонны. Без Кода 95 категории C работать дальнобойщиком в Европе невозможно.",
@@ -23,11 +22,10 @@ const services = [
       "Официальный экзамен в центре WORD",
       "Польский документ европейского образца",
     ],
-    color: "#e85d04",
   },
   {
     id: "kod95-d",
-    icon: "/icon-adr.webp",
+    icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>,
     title: "Код 95 — Категория D",
     subtitle: "Пассажирские автобусы",
     desc: "Сертификат для водителей автобусов и пассажирского транспорта. Открывает возможность работать в европейских транспортных компаниях.",
@@ -38,11 +36,10 @@ const services = [
       "Помощь в подготовке к экзамену",
       "Сертификат действителен по всему ЕС",
     ],
-    color: "#e85d04",
   },
   {
     id: "chip-card",
-    icon: "/icon-chip.webp",
+    icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><path d="M7 15h.01M11 15h2"/></svg>,
     title: "Чип-карта для тахографа",
     subtitle: "Электронная карта водителя",
     desc: "Электронная карта водителя — обязательный документ для работы на грузовых и пассажирских транспортных средствах, оборудованных цифровым тахографом.",
@@ -53,11 +50,10 @@ const services = [
       "Действует 5 лет",
       "Признаётся во всех странах ЕС",
     ],
-    color: "#f48c06",
   },
   {
     id: "license",
-    icon: "/icon-license.webp",
+    icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6"/><circle cx="16" cy="16" r="3"/><path d="M18.5 18.5L20 20"/></svg>,
     title: "Замена водительских прав",
     subtitle: "Обмен на европейские права",
     desc: "Замените свои национальные водительские права на польские европейского образца. Мы подскажем какие документы нужны и ускорим процесс.",
@@ -68,11 +64,10 @@ const services = [
       "Права категорий C, CE, D",
       "Польские права действуют по всему ЕС",
     ],
-    color: "#f48c06",
   },
   {
     id: "jobs",
-    icon: "/icon-jobs.webp",
+    icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e85d04" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M6 12h4M14 12h4"/></svg>,
     title: "Трудоустройство",
     subtitle: "Помощь в поиске работы",
     desc: "После получения Кода 95 помогаем найти работу водителем в европейских компаниях. Наши партнёры предлагают вакансии с достойной зарплатой.",
@@ -83,7 +78,6 @@ const services = [
       "Помощь с оформлением трудового договора",
       "Поддержка на начальном этапе работы",
     ],
-    color: "#22c55e",
   },
 ];
 
@@ -100,7 +94,7 @@ export default function UslugiPage() {
             <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(3rem, 7vw, 5rem)", color: "#f5f5f0", lineHeight: 1, marginBottom: 16 }}>
               НАШИ <span style={{ color: "#e85d04" }}>УСЛУГИ</span>
             </h1>
-            <p style={{ color: "#888", fontSize: "1rem", maxWidth: 500 }}>
+            <p style={{ color: "#ddd", fontSize: "1rem", maxWidth: 500 }}>
               Полное сопровождение — от обучения до трудоустройства в Европе
             </p>
           </div>
@@ -115,22 +109,22 @@ export default function UslugiPage() {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "start" }} className="service-detail-grid">
                   <div>
                     <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
-                      <div style={{ width: 56, height: 56, borderRadius: 12, background: `rgba(232,93,4,0.1)`, border: `1px solid rgba(232,93,4,0.2)`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                        <Image src={s.icon} alt={s.title} width={32} height={32} style={{ objectFit: "contain" }} />
+                      <div style={{ width: 56, height: 56, borderRadius: 12, background: "rgba(232,93,4,0.1)", border: "1px solid rgba(232,93,4,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        {s.icon}
                       </div>
                       <div>
                         <div style={{ fontSize: "0.7rem", color: "#e85d04", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 4 }}>{s.subtitle}</div>
                         <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.8rem", color: "#f5f5f0", letterSpacing: "0.03em" }}>{s.title}</h2>
                       </div>
                     </div>
-                    <p style={{ color: "#999", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: 28 }}>{s.desc}</p>
+                    <p style={{ color: "#ddd", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: 28 }}>{s.desc}</p>
                     <a href="/#contact" className="btn-primary" style={{ fontSize: "0.8rem", padding: "12px 28px" }}>
                       Записаться
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.72rem", color: "#555", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 16 }}>Что включено:</div>
+                    <div style={{ fontSize: "0.72rem", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 16 }}>Что включено:</div>
                     <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                       {s.features.map((f, fi) => (
                         <div key={fi} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -138,7 +132,7 @@ export default function UslugiPage() {
                             <circle cx="12" cy="12" r="11" stroke="#e85d04" strokeWidth="1.5"/>
                             <polyline points="8 12 11 15 16 9" stroke="#e85d04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                           </svg>
-                          <span style={{ fontSize: "0.88rem", color: "#bbb", lineHeight: 1.5 }}>{f}</span>
+                          <span style={{ fontSize: "0.88rem", color: "#eee", lineHeight: 1.5 }}>{f}</span>
                         </div>
                       ))}
                     </div>
@@ -152,7 +146,7 @@ export default function UslugiPage() {
           <div className="fade-up" style={{ textAlign: "center", marginTop: 64 }}>
             <div className="glass-orange" style={{ display: "inline-block", padding: "32px 56px", borderRadius: 8 }}>
               <p style={{ fontSize: "1.1rem", marginBottom: 8, color: "#f5f5f0" }}>Остались вопросы?</p>
-              <p style={{ fontSize: "0.9rem", color: "#888", marginBottom: 24 }}>Позвоните или напишите — ответим в течение часа</p>
+              <p style={{ fontSize: "0.9rem", color: "#ddd", marginBottom: 24 }}>Позвоните или напишите — ответим в течение часа</p>
               <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
                 <a href="tel:+48575633444" className="btn-primary">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
