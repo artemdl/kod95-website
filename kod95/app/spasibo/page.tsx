@@ -22,6 +22,14 @@ export default function SpasiboPage() {
         overflow: "hidden",
       }}
     >
+      {/* Google Ads conversion event */}
+      <script dangerouslySetInnerHTML={{ __html: `
+        gtag('event', 'conversion', {
+          'send_to': 'AW-11367151533/NwB6CN7i06AcEK3vo6wq',
+          'value': 1.0,
+          'currency': 'PLN'
+        });
+      `}} />
       {/* Background orbs */}
       <div style={{ position: "absolute", top: "20%", left: "30%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,93,4,0.12) 0%, transparent 70%)", pointerEvents: "none" }} />
       <div style={{ position: "absolute", bottom: "10%", right: "20%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,93,4,0.08) 0%, transparent 70%)", pointerEvents: "none" }} />

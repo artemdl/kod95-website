@@ -50,6 +50,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
+        {/* Google tag (gtag.js) — Google Ads + Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9D89FM8KT" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-M9D89FM8KT');
+          gtag('config', 'AW-11367151533');
+        `}} />
         {/* Fonts — preload for non-blocking, reduced weights */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
