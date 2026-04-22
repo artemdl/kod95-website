@@ -11,11 +11,22 @@ export default function ContactSection() {
     e.preventDefault();
     setSending(true);
     setError("");
+
+    // Get UTM params from URL
+    const params = new URLSearchParams(window.location.search);
+    const utm = {
+      source: params.get("utm_source") || "",
+      medium: params.get("utm_medium") || "",
+      campaign: params.get("utm_campaign") || "",
+      content: params.get("utm_content") || "",
+      term: params.get("utm_term") || "",
+    };
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, utm, page: "Главная" }),
       });
       if (res.ok) {
         setSent(true);
@@ -71,8 +82,15 @@ export default function ContactSection() {
               <div style={{ fontSize: "0.75rem", color: "#666", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Часы работы</div>
               <div style={{ display: "flex", justifyContent: "space-between", color: "#f5f5f0", fontSize: "0.9rem" }}>
                 <span>Пн — Пт</span>
-                <span style={{ color: "#e85d04", fontWeight: 600 }}>09:00 — 19:00</span>
+                <span style={{ color: "#e85d04", fontWeight: 600 }}>09:30 — 16:00</span>
               </div>
+            </div>
+
+            {/* Visit notice */}
+            <div className="fade-up" style={{ marginTop: 20, padding: "16px 20px", borderRadius: 8, background: "rgba(232,93,4,0.08)", border: "1px solid rgba(232,93,4,0.18)" }}>
+              <p style={{ fontSize: "0.82rem", color: "#ddd", lineHeight: 1.7 }}>
+                <span style={{ color: "#e85d04", fontWeight: 700 }}>Внимание!</span> Планируете визит? Пожалуйста, сначала напишите менеджеру! Мы часто бываем на выездах в госучреждениях (в ужондах), поэтому обязательно свяжитесь с менеджером, чтобы мы точно были на месте!
+              </p>
             </div>
           </div>
 

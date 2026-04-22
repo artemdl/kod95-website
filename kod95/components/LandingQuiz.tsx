@@ -76,8 +76,44 @@ export default function LandingQuiz() {
     setTimeout(() => setStep((s) => s + 1), 300);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+
+    // Get UTM params from URL
+    const params = new URLSearchParams(window.location.search);
+    const utm = {
+      source: params.get("utm_source") || "",
+      medium: params.get("utm_medium") || "",
+      campaign: params.get("utm_campaign") || "",
+      content: params.get("utm_content") || "",
+      term: params.get("utm_term") || "",
+    };
+
+    // Build readable answers
+    const answerTexts = questions.map(q => {
+      const val = answers[q.id];
+      const opt = q.options.find(o => o.value === val);
+      return `${q.question} → ${opt?.label || val || "не указано"}`;
+    }).join("\n");
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Квиз (лендинг)",
+          phone,
+          category: answers[1] || "",
+          message: answerTexts,
+          utm,
+          page: "Лендинг",
+        }),
+      });
+    } catch {}
+
     router.push("/spasibo");
   };
 
@@ -116,8 +152,8 @@ export default function LandingQuiz() {
             onFocus={(e) => (e.currentTarget.style.borderColor = "#e85d04")}
             onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)")}
           />
-          <button type="submit" className="btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: 8, fontSize: "0.95rem", padding: "18px 36px" }}>
-            Отправить
+          <button type="submit" className="btn-primary" disabled={sending} style={{ width: "100%", justifyContent: "center", marginTop: 8, fontSize: "0.95rem", padding: "18px 36px", opacity: sending ? 0.7 : 1 }}>
+            {sending ? "Отправляем..." : "Отправить"}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
             </svg>

@@ -6,7 +6,7 @@ const WEB3FORMS_KEY = "8a28feac-b2de-4541-be8d-c5c2d7537083";
 
 export async function POST(req: Request) {
   try {
-    const { name, phone, category, message } = await req.json();
+    const { name, phone, category, message, utm, page } = await req.json();
 
     if (!name || !phone) {
       return NextResponse.json({ error: "Имя и телефон обязательны" }, { status: 400 });
@@ -14,14 +14,25 @@ export async function POST(req: Request) {
 
     const now = new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" });
 
+    // UTM block
+    const utmLines: string[] = [];
+    if (utm?.source) utmLines.push(`📊 *UTM source:* ${utm.source}`);
+    if (utm?.medium) utmLines.push(`📊 *UTM medium:* ${utm.medium}`);
+    if (utm?.campaign) utmLines.push(`📊 *UTM campaign:* ${utm.campaign}`);
+    if (utm?.content) utmLines.push(`📊 *UTM content:* ${utm.content}`);
+    if (utm?.term) utmLines.push(`📊 *UTM term:* ${utm.term}`);
+
     // ── Telegram ──
     const tgText = [
       `🔔 *Новая заявка с сайта!*`,
       ``,
+      `📄 *Источник:* ${page || "Сайт"}`,
       `👤 *Имя:* ${name}`,
       `📞 *Телефон:* ${phone}`,
       category ? `🚛 *Категория:* ${category}` : null,
       message ? `💬 *Сообщение:* ${message}` : null,
+      utmLines.length > 0 ? `` : null,
+      ...utmLines,
       ``,
       `🕐 ${now}`,
       `🌐 kod95lodz.com`,
